@@ -137,7 +137,7 @@ export default function Home() {
               <div className="text-white space-y-8 animate-fade-in-up">
                 <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
                   <Sparkles className="h-4 w-4 text-blue-300" />
-                  <span className="text-sm font-medium">India's #1 AI-Powered Exam Prep Platform</span>
+                  <span className="text-sm font-medium">India&apos;s #1 AI-Powered Exam Prep Platform</span>
                 </div>
                 
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
@@ -260,13 +260,13 @@ export default function Home() {
               Master Any Competitive Exam
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              From MBA entrance to government jobs, we've got comprehensive preparation 
+              From MBA entrance to government jobs, we&apos;ve got comprehensive preparation 
               materials for every major competitive exam in India.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {examCategories.map((category, index) => (
+            {examCategories.map((category) => (
               <Link key={category.href} href={category.href} className="group">
                 <div className="card-modern hover-lift p-8 h-full">
                   <div className="flex items-start justify-between mb-6">

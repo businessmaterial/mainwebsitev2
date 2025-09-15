@@ -44,7 +44,7 @@ export default function BlogDetailPage() {
   const [likeCount, setLikeCount] = useState(0)
   const [showShareMenu, setShowShareMenu] = useState(false)
   const [showAIMenu, setShowAIMenu] = useState(false)
-  const [tocItems, setTocItems] = useState<{id: string, text: string}[]>([])
+  const [tocItems, setTocItems] = useState<{id: string, text: string, level: number}[]>([])
   const speechRef = useRef<SpeechSynthesisUtterance | null>(null)
 
   useEffect(() => {

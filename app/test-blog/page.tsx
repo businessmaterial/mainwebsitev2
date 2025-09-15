@@ -22,7 +22,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzd
   }
 
   let blogs = []
-  let error = null
+  let error: string | null = null
 
   try {
     console.log('[Test] Attempting to fetch blogs...')
@@ -33,10 +33,10 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzd
     
     console.log('[Test] Fetch result:', { data: !!data, error: fetchError })
     blogs = data || []
-    error = fetchError
+    error = fetchError?.message || null
   } catch (e) {
     console.error('[Test] Fetch exception:', e)
-    error = e
+    error = e instanceof Error ? e.message : 'Unknown error occurred'
   }
 
   return (
@@ -54,7 +54,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzd
         <div className="mb-6">
           <h2 className="text-lg font-semibold mb-2">Error:</h2>
           <pre className="bg-red-100 text-red-800 p-4 rounded text-sm overflow-auto">
-            {JSON.stringify(error, null, 2)}
+            {error}
           </pre>
         </div>
       )}
@@ -63,7 +63,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzd
         <h2 className="text-lg font-semibold mb-2">Blogs Found: {blogs.length}</h2>
         {blogs.length > 0 ? (
           <div className="space-y-2">
-            {blogs.map((blog: any) => (
+            {blogs.map((blog: { id: string; title: string; slug: string; status: string; published_at: string }) => (
               <div key={blog.id} className="border p-4 rounded">
                 <h3 className="font-medium">{blog.title}</h3>
                 <p className="text-sm text-gray-600">Slug: {blog.slug}</p>

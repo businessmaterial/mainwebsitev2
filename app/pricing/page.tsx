@@ -96,7 +96,7 @@ export default function PricingPage() {
       <section className="py-16">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {plans.map((plan, index) => (
+            {plans.map((plan) => (
               <Card 
                 key={plan.name} 
                 className={`relative ${plan.popular ? 'ring-2 ring-primary shadow-lg scale-105' : ''} transition-all hover:shadow-lg`}
@@ -133,7 +133,7 @@ export default function PricingPage() {
 
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-semibold mb-3">What's included:</h4>
+                      <h4 className="font-semibold mb-3">What&apos;s included:</h4>
                       <ul className="space-y-2">
                         {plan.features.map((feature) => (
                           <li key={feature} className="flex items-center space-x-2">
@@ -172,7 +172,7 @@ export default function PricingPage() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Feature Comparison</h2>
               <p className="text-xl text-muted-foreground">
-                See what's included in each plan
+                See what&apos;s included in each plan
               </p>
             </div>
 

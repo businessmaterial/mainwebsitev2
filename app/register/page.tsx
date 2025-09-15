@@ -34,7 +34,7 @@ export default function RegisterPage() {
             </div>
 
             <div className="space-y-4">
-              <h2 className="text-2xl font-semibold">What you'll get:</h2>
+              <h2 className="text-2xl font-semibold">What you&apos;ll get:</h2>
               <div className="grid gap-3">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">

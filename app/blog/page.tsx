@@ -24,7 +24,7 @@ interface Blog {
   category_slug?: string
 }
 
-async function getBlogs(): Promise<{ featuredBlogs: Blog[], recentBlogs: Blog[], categories: any[], totalBlogs: number }> {
+async function getBlogs(): Promise<{ featuredBlogs: Blog[], recentBlogs: Blog[], categories: { name: string; slug: string; count: number }[], totalBlogs: number }> {
   if (!supabase) {
     return { featuredBlogs: [], recentBlogs: [], categories: [], totalBlogs: 0 }
   }
@@ -549,7 +549,7 @@ export default async function BlogPage() {
               <CardContent className="space-y-4">
                 {expertInsights.map((insight, index) => (
                   <div key={index} className="border-l-4 border-blue-200 pl-4 py-2">
-                    <p className="text-sm text-gray-700 italic mb-2">"{insight.insight}"</p>
+                    <p className="text-sm text-gray-700 italic mb-2">&quot;{insight.insight}&quot;</p>
                     <div className="text-xs text-gray-500">
                       <strong>{insight.expert}</strong>, {insight.role}
                     </div>

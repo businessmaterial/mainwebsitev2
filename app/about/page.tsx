@@ -71,7 +71,7 @@ export default function AboutPage() {
               Empowering Dreams Through Education
             </h1>
             <p className="text-xl text-muted-foreground">
-              We're on a mission to democratize quality exam preparation and help students 
+              We&apos;re on a mission to democratize quality exam preparation and help students 
               achieve their career goals through innovative technology and expert guidance.
             </p>
           </div>
@@ -112,7 +112,7 @@ export default function AboutPage() {
                   <h3 className="text-2xl font-semibold mb-4">The Beginning</h3>
                   <p className="text-muted-foreground">
                     Founded in 2020 by a team of IIT alumni and education experts, PrepGrind was born 
-                    from a simple observation: traditional exam preparation methods weren't keeping up 
+                    from a simple observation: traditional exam preparation methods weren&apos;t keeping up 
                     with the changing needs of modern students.
                   </p>
                 </div>

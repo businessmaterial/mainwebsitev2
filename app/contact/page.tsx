@@ -66,7 +66,7 @@ export default function ContactPage() {
               Get in Touch
             </h1>
             <p className="text-xl text-muted-foreground">
-              Have questions? We're here to help. Reach out to us anytime and we'll get back to you as soon as possible.
+              Have questions? We&apos;re here to help. Reach out to us anytime and we&apos;ll get back to you as soon as possible.
             </p>
           </div>
         </div>
@@ -80,7 +80,7 @@ export default function ContactPage() {
               <CardHeader>
                 <CardTitle className="text-2xl">Send us a message</CardTitle>
                 <CardDescription>
-                  Fill out the form below and we'll get back to you within 24 hours
+                  Fill out the form below and we&apos;ll get back to you within 24 hours
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -251,7 +251,7 @@ export default function ContactPage() {
 
             <div className="text-center mt-12">
               <p className="text-muted-foreground mb-4">
-                Still have questions? We're here to help!
+                Still have questions? We&apos;re here to help!
               </p>
               <Button size="lg" asChild>
                 <a href="mailto:support@prepgrind.com">Contact Support</a>
