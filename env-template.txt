@@ -1,0 +1,7 @@
+# Copy this content to a new file called .env.local in the main-website directory
+
+# Supabase Configuration
+NEXT_PUBLIC_SUPABASE_URL=https://etnaybhtkbfxlcqgrzpg.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV0bmF5YmhreGZsY3Fnenpnc
+
+# Note: Replace with your actual Supabase URL and anon key from your .env file in exam-planner-admin 

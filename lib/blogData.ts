@@ -2,48 +2,16 @@ import { Blog, BlogCategory, BlogTag, ExamKey } from './types';
 
 const categories: BlogCategory[] = [
   { slug: 'exam-strategy', name: 'Exam Strategy' },
-  { slug: 'quant-tips', name: 'Quant Tips' },
+  { slug: 'quant', name: 'Quant' },
   { slug: 'verbal', name: 'Verbal' },
 ];
 
 const tags: BlogTag[] = [
   { slug: 'time-management', name: 'Time Management' },
   { slug: 'shortcuts', name: 'Shortcuts' },
-  { slug: 'syllabus', name: 'Syllabus' },
 ];
 
-const blogs: Blog[] = [
-  {
-    id: '1',
-    slug: 'cat-time-management-strategies',
-    exam: 'cat',
-    title: 'CAT Time Management Strategies',
-    excerpt: 'Master time management for CAT with these proven techniques.',
-    content:
-      '## CAT Time Management\n\nLearn how to allocate time across sections and practice with mocks.',
-    featuredImageUrl: '/og-default.png',
-    author: 'Prep Team',
-    publishedAt: new Date().toISOString(),
-    status: 'published',
-    categories: [categories[0]],
-    tags: [tags[0], tags[1]],
-    metaTitle: 'CAT Time Management Strategies',
-    metaDescription: 'Improve your CAT time management with actionable tips.',
-  },
-  {
-    id: '2',
-    slug: 'ssc-cgl-quant-shortcuts',
-    exam: 'ssc-cgl',
-    title: 'SSC CGL Quant Shortcuts',
-    excerpt: 'Speed up your quant solving with these shortcuts.',
-    content: '## SSC CGL Quant Shortcuts\n\nA list of helpful tricks and patterns.',
-    author: 'Quant Expert',
-    publishedAt: new Date().toISOString(),
-    status: 'published',
-    categories: [categories[1]],
-    tags: [tags[1]],
-  },
-];
+const blogs: Blog[] = [];
 
 export function getAllBlogs(): Blog[] {
   return blogs.filter((b) => b.status === 'published');
